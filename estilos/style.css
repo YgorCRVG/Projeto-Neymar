@@ -1,14 +1,3 @@
-/* 
-#fff
-#ffffffcc
-#000000
-#000000cc
-#0200006e
-#ffdf00
-#009c3b
-------   Paletas de cores para o desenvolvimento do projeto. -------
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -16,16 +5,10 @@
     font-family: 'Ysabeau Infant', sans-serif;
 }
 
-body {
-    overflow-x: hidden; /* evita rolagem lateral */
-}
-
-/* Banner */
 .secao-banner {
     position: relative;
     width: 100%;
-    height: 100vh;   /* fallback */
-    height: 100dvh;  /* altura real em mobile */
+    height: 100vh;
 
     display: flex;
     align-items: center;
@@ -36,8 +19,7 @@ body {
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 100vh;   /* fallback */
-    height: 100dvh;  /* altura real em mobile */
+    height: 100vh;
     object-fit: cover;
 }
 
@@ -72,7 +54,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 .imgperfil::before {
@@ -103,7 +84,9 @@ body {
     background: linear-gradient(90deg, #ffdf00, #009c3b);
 }
 
-/* Links */
+/* Fim da imagem de perfil e título */
+
+/* Começo dos links */
 .links {
     width: 100%;
     max-width: 768px;
@@ -146,12 +129,14 @@ body {
     color: #000;
 }
 
-/* Estatísticas */
+/* Fim da estilização dos links */
+
+/* Seção das tabelas/estatísticas */
+
 .estatisticas {
     position: relative;
     width: 100%;
-    height: 100vh;   /* fallback */
-    height: 100dvh;  /* altura real em mobile */
+    height: 100vh;
     text-align: center;
 
     display: flex;
@@ -173,6 +158,19 @@ body {
     text-shadow: 1px 1px 1px #0000006c;
 }
 
+/* wrapper para scroll horizontal */
+.tabela-wrapper {
+    width: 100%;
+    overflow-x: auto; /* só aparece se necessário */
+}
+
+.tabela-estatisticas {
+    border-collapse: separate;
+    border-spacing: 4px; /* espaço entre quadrados */
+    width: 100%;
+    max-width: 100%;
+}
+
 .tabela-estatisticas th {
     font-size: 22px;
     background-color: rgba(0, 0, 0, 0.856);
@@ -181,8 +179,8 @@ body {
 }
 
 .tabela-estatisticas th,
-.tabela-estatisticas tr,
-.tabela-estatisticas td {
+tr,
+td {
     padding: 20px;
 }
 
@@ -208,4 +206,42 @@ body {
     font-weight: 700;
     font-size: 18px;
     color: #fff;
+}
+
+/* ===== Responsividade ===== */
+
+@media (max-width: 768px) {
+    .estatisticas h2 {
+        font-size: 36px;
+    }
+
+    .tabela-estatisticas th,
+    .tabela-estatisticas td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .estatisticas h2 {
+        font-size: 28px;
+    }
+
+    .tabela-estatisticas th,
+    .tabela-estatisticas td {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .estatisticas h2 {
+        font-size: 20px;
+    }
+
+    .tabela-estatisticas th,
+    .tabela-estatisticas td {
+        padding: 4px;
+        font-size: 8px;
+    }
 }
