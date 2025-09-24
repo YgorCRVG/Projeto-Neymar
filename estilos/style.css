@@ -84,6 +84,19 @@
     background: linear-gradient(90deg, #ffdf00, #009c3b);
 }
 
+.imgperfil-titulo h1::after {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  right: -20px;
+  background-image: url(../assets/img/verificado.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
 /* Fim da imagem de perfil e título */
 
 /* Começo dos links */
